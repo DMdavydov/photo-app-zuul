@@ -11,14 +11,32 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
+api:
+  login:
+    url: "/bug-tracker-users/users/login"
+  registration:
+    url: "/bug-tracker-users/users"
+  h2-console:
+    url: "/bug-tracker-users/h2-console/**"
+
+authorization:
+  token:
+    header:
+      name: Authorization
+      prefix: Bearer
+
+token:
+  expiration: 864000000 #10 days
+  secret: hrewarhewatjawete5345jdashrak3
+
 # Disable Hystrix timeout globally (for all services)
 hystrix.command.default.execution.timeout.enabled: false
 
 #To disable timeout foror particular service,
-hystrix.command.<serviceName>.execution.timeout.enabled: false
+hystrix.command.bug-tracker-users.execution.timeout.enabled: false
 
 # Increase the Hystrix timeout to 60s (globally)
 hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
 
 # Increase the Hystrix timeout to 60s (per service)
-hystrix.command.<serviceName>.execution.isolation.thread.timeoutInMilliseconds: 60000
+hystrix.command.bug-tracker-users.execution.isolation.thread.timeoutInMilliseconds: 60000
