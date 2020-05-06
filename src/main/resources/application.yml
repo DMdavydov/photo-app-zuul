@@ -1,21 +1,8 @@
-server.port: 8011
-spring:
-  application:
-    name: bug-tracker-zuul
-  devtools:
-    restart:
-      enabled: true
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-
 api:
   login:
     url: "/bug-tracker-users/users/login"
   registration:
-    url: "/bug-tracker-users/users"
+    url: "/bug-tracker-users/users/create"
   h2-console:
     url: "/bug-tracker-users/h2-console/**"
 

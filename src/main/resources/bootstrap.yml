@@ -1,0 +1,15 @@
+server.port: 8011
+spring:
+  application:
+    name: bug-tracker-zuul
+  devtools:
+    restart:
+      enabled: true
+  cloud:
+    config:
+      uri: http://localhost:8012
+      name: bug-tracker-config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
