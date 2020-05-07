@@ -21,12 +21,11 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.headers().frameOptions().disable();
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST, environment.getProperty("api.login.url"))
-                .permitAll()
-                .antMatchers(HttpMethod.POST, environment.getProperty("api.registration.url"))
-                .permitAll()
-                .antMatchers(environment.getProperty("api.h2-console.url"))
-                .permitAll()
+                .antMatchers(HttpMethod.POST, environment.getProperty("api.login.url")).permitAll()
+                .antMatchers(HttpMethod.POST, environment.getProperty("api.registration.url")).permitAll()
+                .antMatchers(environment.getProperty("api.users.actuator.url.path")).permitAll()
+                .antMatchers(environment.getProperty("api.zuul.actuator.url.path")).permitAll()
+                .antMatchers(environment.getProperty("api.h2-console.url")).permitAll()
                 .anyRequest().authenticated()
         .and()
         .addFilter(new AuthorizationFilter(authenticationManager(), environment));

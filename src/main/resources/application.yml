@@ -5,6 +5,14 @@ api:
     url: "/bug-tracker-users/users/create"
   h2-console:
     url: "/bug-tracker-users/h2-console/**"
+  users:
+    actuator:
+      url:
+        path: "/bug-tracker-users/actuator/*"
+  zuul:
+    actuator:
+      url:
+        path: "/actuator/*"
 
 authorization:
   token:
