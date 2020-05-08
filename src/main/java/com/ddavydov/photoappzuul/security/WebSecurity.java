@@ -1,4 +1,4 @@
-package com.ddavydov.bugtrackerzuul.security;
+package com.ddavydov.photoappzuul.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;

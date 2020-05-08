@@ -1,10 +1,10 @@
-package com.ddavydov.bugtrackerzuul;
+package com.ddavydov.photoappzuul;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BugTrackerZuulApplicationTests {
+class PhotoAppZuulApplicationTests {
 
     @Test
     void contextLoads() {

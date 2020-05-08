@@ -1,14 +1,14 @@
 api:
   login:
-    url: "/bug-tracker-users/users/login"
+    url: "/photo-app-users/users/login"
   registration:
-    url: "/bug-tracker-users/users/create"
+    url: "/photo-app-users/users/create"
   h2-console:
-    url: "/bug-tracker-users/h2-console/**"
+    url: "/photo-app-users/h2-console/**"
   users:
     actuator:
       url:
-        path: "/bug-tracker-users/actuator/*"
+        path: "/photo-app-users/actuator/*"
   zuul:
     actuator:
       url:

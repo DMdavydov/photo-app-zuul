@@ -1,8 +1,6 @@
-package com.ddavydov.bugtrackerzuul.security;
+package com.ddavydov.photoappzuul.security;
 
 import io.jsonwebtoken.Jwts;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.core.env.Environment;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

@@ -1,14 +1,14 @@
 server.port: 8011
 spring:
   application:
-    name: bug-tracker-zuul
+    name: photo-app-zuul
   devtools:
     restart:
       enabled: true
   cloud:
     config:
       uri: http://localhost:8012
-      name: bug-tracker-config-server
+      name: photo-app-config-server
   rabbitmq:
     host: localhost
     port: 5672
